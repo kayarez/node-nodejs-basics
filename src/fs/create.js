@@ -4,12 +4,12 @@ import { constants } from 'fs';
 export const create = async () => {
 
     try{
-        if(await exists('files/fresh.txt'))
+        if(await exists('src/fs/files/fresh.txt'))
            {
             throw new Error("FS operation failed");
         }
         else{
-        const promise = await fs.writeFile('files/fresh.txt', "I am fresh and young", {flag: 'wx'});
+        const promise = await fs.writeFile('src/fs/files/fresh.txt', "I am fresh and young", {flag: 'wx'});
         }        
     }
     

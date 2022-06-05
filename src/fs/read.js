@@ -2,13 +2,13 @@ import * as fs from "node:fs/promises";
 
 export const read = async () => {
     try {
-        if (!(await exists('files/fileToRead.txt'))) {
+        if (!(await exists('src/fs/files/fileToRead.txt'))) {
 
             throw new Error("FS operation failed"); 
             
         } else {
 
-            const promise = await fs.readFile('files/fileToRead.txt',  { encoding: 'utf8' });
+            const promise = await fs.readFile('src/fs/files/fileToRead.txt',  { encoding: 'utf8' });
             console.log(promise);
             
         }

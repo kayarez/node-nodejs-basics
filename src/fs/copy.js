@@ -5,12 +5,12 @@ export const copy = async () => {
     try {
 
 
-        if (!(await exists('files')) || (await exists('files_copy'))) {
+        if (!(await exists('src/fs/files')) || (await exists('src/fs/files_copy'))) {
 
             throw new Error("FS operation failed"); 
         } else {
 
-            const promise = await fs.cp('files', 'files_copy', {recursive: true});
+            const promise = await fs.cp('src/fs/files', 'src/fs/files_copy', {recursive: true});
         }
         
     } catch (error) {

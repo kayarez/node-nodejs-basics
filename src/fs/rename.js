@@ -3,12 +3,12 @@ import * as fs from "node:fs/promises";
 export const rename = async () => {
     try {
 
-        if(!(await exists('files/wrongFilename.txt')) || (await exists('files/properFilename.md'))){
+        if(!(await exists('src/fs/files/wrongFilename.txt')) || (await exists('src/fs/files/properFilename.md'))){
 
             throw new Error("FS operation failed"); 
 
             } else {
-        const promise = await fs.rename('files/wrongFilename.txt','files/properFilename.md');
+        const promise = await fs.rename('src/fs/files/wrongFilename.txt','src/fs/files/properFilename.md');
         }
 
     } catch (error) {

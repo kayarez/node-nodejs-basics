@@ -3,14 +3,14 @@ import * as fs from "node:fs/promises";
 export const list = async () => {
     try {
 
-        if(!(await exists('files'))){
+        if(!(await exists('src/fs/files'))){
 
             throw new Error("FS operation failed");
         }
 
         else{
 
-            const promise = await fs.readdir('files');
+            const promise = await fs.readdir('src/fs/files');
             console.log(promise);
         }
         
