@@ -4,7 +4,20 @@
   "description": "This repository is the part of nodejs-assignments https://github.com/AlreadyBored/nodejs-assignments",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fs:read": "node src/fs/read.js",
+    "fs:copy": "node src/fs/copy.js",
+    "fs:delete": "node src/fs/delete.js",
+    "fs:list": "node src/fs/list.js",
+    "fs:create": "node src/fs/create.js",
+    "fs:rename": "node src/fs/rename.js",
+    "hash:calcHash": "node src/hash/calcHash.js",
+    "zip:compress": "node src/zip/compress.js",
+    "zip:decompress": "node src/zip/decompress.js",
+    "streams:read": "node src/streams/read.js",
+    "streams:write": "node src/streams/write.js",
+    "streams:transform": "node src/streams/transform.js"
+
   },
   "repository": {
     "type": "git",
@@ -22,7 +35,11 @@
   },
   "homepage": "https://github.com/AlreadyBored/node-nodejs-basics#readme",
   "dependencies": {
+    "crypto": "^1.0.1",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "stream": "^0.0.2",
+    "util": "^0.12.4",
+    "zlib": "^1.0.5"
   }
 }
